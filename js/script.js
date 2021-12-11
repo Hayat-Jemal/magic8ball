@@ -56,7 +56,29 @@ function ask() {
      title.style.display = "block";
     answer.innerHTML = "";
   });
-  
+  const content = document.getElementById("content");
+  content.style.display = "none";
+  title.style.display = "none";
+
+  // create p tag and append to html to display users question after user clicked ask button
+  const askedQuestion = document.createElement("p");
+  askedQuestion.setAttribute("id", "text");
+  answer.prepend(askedQuestion);
+  askedQuestion.innerText = input.value;
+
+  // // create return button to ask another
+  backBtn.setAttribute("id", "backBtn");
+  //with out "id" js works but we want to add css styles
+  backBtn.innerText = "Ask more questions";
+  backBtn.style.textAlign = "center";
+  answer.appendChild(backBtn);
+
+  // rotate the answer
+  answer.style.transition = "all 1s ease-in-out";
+  answer.style.transform = "rotate(" + rot + "deg)";
+  rot += 360;
+     
+
 }
 
 
