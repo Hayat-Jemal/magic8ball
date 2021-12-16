@@ -33,7 +33,7 @@ button.addEventListener("click", function ask() {
   if (input.value.length !== 0) {
     // selecting random index from allImg
     let randomImg = Math.floor(Math.random() * allImg.length);
-    console.log(randomImg);
+    // console.log(randomImg);
 
     // Create image tag to insert random image
     let img = document.createElement("img");
@@ -51,7 +51,7 @@ button.addEventListener("click", function ask() {
     answer.appendChild(backBtn);
     backBtn.style.textAlign = "center";
 
-    // create p tag and append to html to display users question after user clicked ask button
+    
     let asked = document.createElement("p");
     asked.setAttribute("id", "text");
     asked.innerText = input.value;
